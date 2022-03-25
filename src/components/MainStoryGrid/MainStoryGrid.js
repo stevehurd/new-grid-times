@@ -70,6 +70,7 @@ const Wrapper = styled.div`
 			"main-story secondary-stories opinion-stories"
 			"main-story advertisement advertisement";
 		grid-template-columns: 1fr 1fr 0.75fr;
+		gap: 0px;
 	}
 `;
 
@@ -131,6 +132,12 @@ const OpinionStoryList = styled(StoryList)`
 
 const AdvertisementSection = styled.section`
 	grid-area: advertisement;
+
+	@media ${QUERIES.laptopAndUp} {
+		padding-top: var(--spacer);
+		margin-top: var(--spacer);
+		border-top: 1px solid var(--color-gray-300);
+	}
 `;
 
 export default MainStoryGrid;
