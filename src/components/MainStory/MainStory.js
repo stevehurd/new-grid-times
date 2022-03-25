@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components/macro";
+import { QUERIES } from "../../constants";
 
 const MainStory = ({ id, title, image, location, abstract, ...delegated }) => {
 	return (
@@ -41,6 +42,14 @@ const Abstract = styled.p`
 	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 8;
 	overflow: hidden;
+
+	@media ${QUERIES.tabletAndUp} {
+		-webkit-line-clamp: 16;
+	}
+
+	@media ${QUERIES.laptopAndUp} {
+		-webkit-line-clamp: 12;
+	}
 `;
 
 const Location = styled.span`
